@@ -25,3 +25,6 @@ script to print a directory named my_first_directory in the /tmp/ directory
 ### [7-movethatfile](7-movethatfile)
 sript to Move the file betty from /tmp/ to /tmp/my_first_directory
 
+### [8-firstdelete](8-firstdelete)
+script to delete the file betty
+
