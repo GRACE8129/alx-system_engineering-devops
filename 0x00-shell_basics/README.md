@@ -31,3 +31,6 @@ script to delete the file betty
 ### [9-firstdirdeletion](9-firstdirdeletion)
 script to Delete the directory my_first_directory that is in the /tmp directory.
 
+### [10-back](10-back)
+script that changes the working directory to the previous one
+
