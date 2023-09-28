@@ -15,3 +15,6 @@ This file contains a script that prints current directory contents in a long for
 ### [4-listmorefiles](4-listmorefiles)
 This file contains a script that prints current directory contents, including hidden files (starting with .)
 
+### [5-listfilesdigitonly](5-listfilesdigitonly)
+This file contains a script that prints current directory contents,Long format,with user and group IDs displayed numerically and hidden files (starting with .)
+
