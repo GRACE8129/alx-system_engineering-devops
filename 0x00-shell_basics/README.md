@@ -20,5 +20,8 @@ This file contains a script that prints current directory contents,Long format,w
 
 
 ### [6-firstdirectory](6-firstdirectory)
-script tp print a directory named my_first_directory in the /tmp/ directory
+script to print a directory named my_first_directory in the /tmp/ directory
+
+### [7-movethatfile](7-movethatfile)
+sript to Move the file betty from /tmp/ to /tmp/my_first_directory
 
