@@ -18,3 +18,7 @@ This file contains a script that prints current directory contents, including hi
 ### [5-listfilesdigitonly](5-listfilesdigitonly)
 This file contains a script that prints current directory contents,Long format,with user and group IDs displayed numerically and hidden files (starting with .)
 
+
+### [6-firstdirectory](6-firstdirectory)
+script tp print a directory named my_first_directory in the /tmp/ directory
+
