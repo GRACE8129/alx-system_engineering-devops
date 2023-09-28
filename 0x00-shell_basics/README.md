@@ -12,3 +12,6 @@ This file contains a script that changes the working directory to the user’s h
 ### [3-listfiles](3-listfiles)
 This file contains a script that prints current directory contents in a long format
 
+### [4-listmorefiles](4-listmorefiles)
+This file contains a script that prints current directory contents, including hidden files (starting with .)
+
