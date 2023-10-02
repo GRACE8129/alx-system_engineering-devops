@@ -39,7 +39,8 @@ A script that counts the number of directories and sub-directories in the curren
 ### [12-newest_files](12-newest_files)
 A script that displays the 10 newest files in the current directory.
 
-
+### [13-unique](13-unique)
+A script that takes a list of words as input and prints only words that appear exactly once.
 
 
 
