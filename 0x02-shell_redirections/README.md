@@ -45,7 +45,8 @@ A script that takes a list of words as input and prints only words that appear e
 ### [14-findthatword](14-findthatword)
 A script to display lines containing the pattern “root” from the file /etc/passwd
 
-
+### [15-countthatword](15-countthatword) 
+A script that display the number of lines that contain the pattern “bin” in the file /etc/passwd
 
 
 
