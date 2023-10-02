@@ -9,4 +9,7 @@ a script that displays a confused smiley "(Ôo)'.
 ### [2-hellofile](2-hellofile)
 script to display the content of the /etc/passwd file.
 
+### [3-twofiles](3-twofiles)
+A script to display the content of /etc/passwd and /etc/hosts.
+
 
