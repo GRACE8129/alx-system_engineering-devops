@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# Making nginx to run as the nginx user and listen on port 8080
+
+# Setting nginx as user in the config
+sudo sed -i "s/#user www-data/user nginx/" /etc/nginx/nginx.conf
+
+# Replacing port 80 with 8080 in the config file
+sudo sed -i "s/80/8080/g" /etc/nginx/sites-available/default
+
+# Changing nginx ownership in /usr/share/nginx to user and group
+chown -R nginx:nginx /usr/share/nginx
+
+# To give read and write permissions to the config file
+sudo chmod 644 /etc/nginx/nginx.conf
+
+# Stopping Apache if it's running
+sudo service apache2 stop
+
+# OR Kill the apache process
+# pkill apache2
+
+# Checking if nginx service is enabled otherwise restart
+sudo service nginx enable
+
+# Restart the nginx service as the nginx user
+sudo -u nginx service nginx restart
