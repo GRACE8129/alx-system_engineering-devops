@@ -2,8 +2,7 @@
 """Function to query a list of all hot posts on a given Reddit subreddit."""
 import requests
 
-
-def recurse(subreddit, hot_list=[], after="", count=0):
+def recurse(subreddit, hot_list=[], after=None):
     """Returns a list of titles of all hot posts on a given subreddit."""
     url = "https://www.reddit.com/r/{}/hot/.json".format(subreddit)
     headers = {
@@ -11,20 +10,27 @@ def recurse(subreddit, hot_list=[], after="", count=0):
     }
     params = {
         "after": after,
-        "count": count,
         "limit": 100
     }
-    response = requests.get(url, headers=headers, params=params,
-                            allow_redirects=False)
-    if response.status_code == 404:
+    response = requests.get(url, headers=headers, params=params, allow_redirects=False)
+    
+    if response.status_code != 200:
         return None
 
-    results = response.json().get("data")
-    after = results.get("after")
-    count += results.get("dist")
-    for c in results.get("children"):
-        hot_list.append(c.get("data").get("title"))
-
-    if after is not None:
-        return recurse(subreddit, hot_list, after, count)
-    return hot_list
+    try:
+        results = response.json().get("data", {})
+        after = results.get("after")
+        children = results.get("children", [])
+        
+        if not children:
+            return None
+        
+        for child in children:
+            hot_list.append(child.get("data", {}).get("title"))
+        
+        if after:
+            return recurse(subreddit, hot_list, after)
+        else:
+            return hot_list
+    except ValueError:
+        return None
